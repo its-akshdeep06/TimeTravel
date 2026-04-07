@@ -1,0 +1,258 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* Time Travel Classroom - Cosmic Dark Theme */
+:root {
+  /* Core cosmic palette */
+  --void: #050510;
+  --deep: #0A0A2E;
+  --nebula: #1A1A4E;
+  --electric: #7C3AED;
+  --glow: #A78BFA;
+  --cyan: #06B6D4;
+  --gold: #F59E0B;
+  --stardust: #E2E8F0;
+  --dim: #94A3B8;
+  
+  /* Semantic tokens mapped to cosmic theme */
+  --background: #050510;
+  --foreground: #E2E8F0;
+  --card: #0A0A2E;
+  --card-foreground: #E2E8F0;
+  --popover: #1A1A4E;
+  --popover-foreground: #E2E8F0;
+  --primary: #7C3AED;
+  --primary-foreground: #ffffff;
+  --secondary: #1A1A4E;
+  --secondary-foreground: #E2E8F0;
+  --muted: #0A0A2E;
+  --muted-foreground: #94A3B8;
+  --accent: #06B6D4;
+  --accent-foreground: #050510;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #1A1A4E;
+  --input: #1A1A4E;
+  --ring: #7C3AED;
+  --chart-1: #7C3AED;
+  --chart-2: #06B6D4;
+  --chart-3: #A78BFA;
+  --chart-4: #F59E0B;
+  --chart-5: #E2E8F0;
+  --radius: 0.75rem;
+  --sidebar: #0A0A2E;
+  --sidebar-foreground: #E2E8F0;
+  --sidebar-primary: #7C3AED;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1A1A4E;
+  --sidebar-accent-foreground: #E2E8F0;
+  --sidebar-border: #1A1A4E;
+  --sidebar-ring: #7C3AED;
+}
+
+@theme inline {
+  --font-sans: var(--font-space-grotesk), 'Space Grotesk', system-ui, sans-serif;
+  --font-serif: var(--font-inter), 'Inter', system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
+  
+  /* Cosmic color tokens */
+  --color-void: var(--void);
+  --color-deep: var(--deep);
+  --color-nebula: var(--nebula);
+  --color-electric: var(--electric);
+  --color-glow: var(--glow);
+  --color-cyan: var(--cyan);
+  --color-gold: var(--gold);
+  --color-stardust: var(--stardust);
+  --color-dim: var(--dim);
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Cosmic UI Utilities */
+.glass-card {
+  background: rgba(10, 10, 46, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.neon-glow {
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.4), 
+              0 0 40px rgba(124, 58, 237, 0.2),
+              inset 0 0 20px rgba(124, 58, 237, 0.1);
+}
+
+.neon-text {
+  text-shadow: 0 0 10px rgba(167, 139, 250, 0.8),
+               0 0 20px rgba(124, 58, 237, 0.6),
+               0 0 40px rgba(124, 58, 237, 0.4);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #A78BFA 0%, #06B6D4 50%, #7C3AED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--void);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--nebula);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--electric);
+}
+
+.cosmic-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(54px);
+  opacity: 0.45;
+  animation: drift 18s ease-in-out infinite;
+}
+
+.blob-1 {
+  width: 420px;
+  height: 420px;
+  background: rgba(124, 58, 237, 0.32);
+  top: 10%;
+  left: -10%;
+  animation-duration: 20s;
+}
+
+.blob-2 {
+  width: 320px;
+  height: 320px;
+  background: rgba(6, 182, 212, 0.28);
+  bottom: 8%;
+  right: 5%;
+  animation-duration: 24s;
+}
+
+.blob-3 {
+  width: 260px;
+  height: 260px;
+  background: rgba(167, 139, 250, 0.22);
+  top: 45%;
+  right: 15%;
+  animation-duration: 22s;
+}
+
+@keyframes drift {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(18px, -28px) scale(1.05);
+  }
+  50% {
+    transform: translate(-18px, 20px) scale(0.95);
+  }
+  75% {
+    transform: translate(10px, 24px) scale(1.02);
+  }
+}
+
+.constellation-svg {
+  opacity: 0.55;
+  animation: fade-in-background 1.4s ease forwards;
+}
+
+.constellation-line {
+  stroke: rgba(167, 139, 250, 0.5);
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 8s ease-in-out infinite;
+}
+
+.constellation-star {
+  fill: rgba(226, 232, 240, 0.9);
+  filter: drop-shadow(0 0 8px rgba(167, 139, 250, 0.6));
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+@keyframes dash {
+  0%, 100% {
+    stroke-dashoffset: 1000;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.18);
+  }
+}
+
+@keyframes fade-in-background {
+  from { opacity: 0; }
+  to { opacity: 0.55; }
+}
