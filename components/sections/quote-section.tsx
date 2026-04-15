@@ -32,7 +32,7 @@ export function QuoteSection() {
         <RevealSection delay={0.2}>
           <blockquote className="text-2xl sm:text-3xl lg:text-4xl font-medium text-[#E2E8F0] leading-relaxed mb-8 italic">
             &quot;I used to dread history class. Now I can&apos;t wait to step into a new simulation. 
-            Having a conversation with Einstein about his thought experiments changed how I understand physics forever.&quot;
+            Having a conversation with Einstein about his thought experiments changed how I understand physics forever!&quot;
           </blockquote>
         </RevealSection>
 
