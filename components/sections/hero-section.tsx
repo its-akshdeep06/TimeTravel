@@ -66,8 +66,8 @@ export function HeroSection() {
 
         <RevealSection delay={0.5}>
           <p className="text-lg sm:text-xl text-[#94A3B8] max-w-2xl mx-auto mb-10 leading-relaxed text-pretty">
-            Experience history like never before. Converse with AI-powered historical figures, 
-            solve missions in pivotal moments, and build your knowledge through immersive roleplay.
+            Experience learning like never before. Converse with AI-powered historical figures, 
+            solve missions in pivotal moments, and build your knowledge through immersive role-play.
           </p>
         </RevealSection>
 
